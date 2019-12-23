@@ -1,0 +1,12 @@
+def adds_comma(no_comma):
+    new_list = ''
+    for word in range(len(no_comma) - 1):
+        new_list += str(no_comma[word] + ', ')
+    new_list += 'and ' + no_comma[-1]
+    print(new_list)
+
+
+spam = ['apples', 'bananas', 'tofu', 'cats']
+adds_comma(spam)
+
+#Returns apples, bananas, tofu, and cats
