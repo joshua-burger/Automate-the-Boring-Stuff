@@ -1,0 +1,19 @@
+tableData = [['apples', 'oranges', 'cherries', 'banana'],
+            ['Alice', 'Bob', 'Carol', 'David'],
+            ['dogs', 'cats', 'moose', 'goose']]
+
+
+def print_table(table):
+    col_widths = [0] * len(table)
+    for i in range(len(table)):
+        for j in range(len(table)):
+            if len(table[j][i]) > col_widths[j]:
+                col_widths[j] = len(table[j][i])
+    for i in range(len(table[0])):
+        for j in range(len(table)):
+            print(table[j][i].rjust(col_widths[j]), end=' ')
+            if j == len(table)-1:
+                print('\r')
+
+
+print_table(tableData)
